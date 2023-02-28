@@ -1,6 +1,7 @@
 package vista;
 
 import javax.swing.JOptionPane;
+import modelo.Conversor;
 
 /**
  *
@@ -220,13 +221,37 @@ public class Principal extends javax.swing.JFrame {
 
     private void btn_convetirMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btn_convetirMouseClicked
         this.panel_contenedor_bases.setVisible(true); 
-        /**
-        *if(jtf_number.isValid()){
-            JOptionPane.showMessageDialog(this, "Digite un numero", "Validación", JOptionPane.INFORMATION_MESSAGE);
-        }
-        else {
-            this.panel_contenedor_bases.setVisible(true); 
-        }*/
+        Conversor conversor = new Conversor(); 
+        
+        Base2 base2 = new Base2(); 
+        Base3 base3 = new Base3(); 
+        Base4 base4 = new Base4(); 
+        Base5 base5 = new Base5(); 
+        
+        int numero = Integer.parseInt(jtf_number.getText()); 
+        base2.jtf_base2.setText(String.valueOf(conversor.conversor_base_mediana(numero, 2)));
+        System.out.println(conversor.conversor_base_mediana(numero, 2));
+        base2.jtf_base4.setText(String.valueOf(conversor.conversor_base_mediana(numero, 4)));
+        System.out.println(conversor.conversor_base_mediana(numero, 4));
+        base2.jtf_base8.setText(String.valueOf(conversor.conversor_base_mediana(numero, 8)));
+        System.out.println(conversor.conversor_base_mediana(numero, 8));
+        base2.jtf_base16.setText(String.valueOf(conversor.conversor_base_grande(numero, 16)));
+        System.out.println(conversor.conversor_base_mediana(numero, 16));
+        
+        base3.jtf_base3.setText(String.valueOf(conversor.conversor_base_mediana(numero, 3)));
+        base3.jtf_base9.setText(String.valueOf(conversor.conversor_base_mediana(numero, 9)));
+        base3.jtf_base27.setText(String.valueOf(conversor.conversor_base_grande(numero, 27)));
+        base3.jtf_base81.setText(String.valueOf(conversor.conversor_base_grande(numero, 81)));
+        
+        base4.jtf_base4.setText(String.valueOf(conversor.conversor_base_mediana(numero, 4)));
+        base4.jtf_base16.setText(String.valueOf(conversor.conversor_base_grande(numero, 16)));
+        base4.jtf_base64.setText(String.valueOf(conversor.conversor_base_grande(numero, 64)));
+        base4.jtf_base256.setText(String.valueOf(conversor.conversor_base_grande(numero, 256)));
+        
+        base5.jtf_base5.setText(String.valueOf(conversor.conversor_base_mediana(numero, 5)));
+        base5.jtf_base25.setText(String.valueOf(conversor.conversor_base_grande(numero, 25)));
+        base5.jtf_base125.setText(String.valueOf(conversor.conversor_base_grande(numero, 125)));
+        base5.jtf_base625.setText(String.valueOf(conversor.conversor_base_grande(numero, 625)));
     }//GEN-LAST:event_btn_convetirMouseClicked
 
     private void jtf_numberKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jtf_numberKeyTyped

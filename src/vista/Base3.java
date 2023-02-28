@@ -163,10 +163,10 @@ public class Base3 extends javax.swing.JPanel {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel jLabel1;
-    private javax.swing.JTextField jtf_base27;
-    private javax.swing.JTextField jtf_base3;
-    private javax.swing.JTextField jtf_base81;
-    private javax.swing.JTextField jtf_base9;
+    public javax.swing.JTextField jtf_base27;
+    public javax.swing.JTextField jtf_base3;
+    public javax.swing.JTextField jtf_base81;
+    public javax.swing.JTextField jtf_base9;
     private javax.swing.JTextField jtf_equivalencias;
     private javax.swing.JLabel lbl_base16;
     private javax.swing.JLabel lbl_base3;

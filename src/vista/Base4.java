@@ -159,10 +159,10 @@ public class Base4 extends javax.swing.JPanel {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel jLabel1;
-    private javax.swing.JTextField jtf_base16;
-    private javax.swing.JTextField jtf_base256;
-    private javax.swing.JTextField jtf_base4;
-    private javax.swing.JTextField jtf_base64;
+    public javax.swing.JTextField jtf_base16;
+    public javax.swing.JTextField jtf_base256;
+    public javax.swing.JTextField jtf_base4;
+    public javax.swing.JTextField jtf_base64;
     private javax.swing.JTextField jtf_equivalencias;
     private javax.swing.JLabel lbl_base16;
     private javax.swing.JLabel lbl_base256;
