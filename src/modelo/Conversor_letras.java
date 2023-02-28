@@ -246,6 +246,10 @@ public class Conversor_letras {
             case 87: {
                 letra = "ω";
             }
+            default: {
+                String v_numero = String.valueOf(" "  + numero + " "); 
+                letra = v_numero; 
+            }
         }
         return letra; 
     }

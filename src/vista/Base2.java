@@ -12,7 +12,6 @@ public class Base2 extends javax.swing.JPanel {
     public Base2() {
         initComponents();
     }
-
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -171,10 +170,10 @@ public class Base2 extends javax.swing.JPanel {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel jLabel1;
-    private javax.swing.JTextField jtf_base16;
-    private javax.swing.JTextField jtf_base2;
-    private javax.swing.JTextField jtf_base4;
-    private javax.swing.JTextField jtf_base8;
+    public javax.swing.JTextField jtf_base16;
+    public javax.swing.JTextField jtf_base2;
+    public javax.swing.JTextField jtf_base4;
+    public javax.swing.JTextField jtf_base8;
     private javax.swing.JTextField jtf_equivalencias;
     private javax.swing.JLabel lbl_base16;
     private javax.swing.JLabel lbl_base2;

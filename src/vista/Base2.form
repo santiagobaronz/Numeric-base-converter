@@ -114,6 +114,9 @@
               <Font name="Comic Sans MS" size="18" style="2"/>
             </Property>
           </Properties>
+          <AuxValues>
+            <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
+          </AuxValues>
         </Component>
         <Component class="javax.swing.JLabel" name="lbl_base4">
           <Properties>
@@ -132,6 +135,9 @@
               <Font name="Comic Sans MS" size="18" style="2"/>
             </Property>
           </Properties>
+          <AuxValues>
+            <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
+          </AuxValues>
         </Component>
         <Component class="javax.swing.JTextField" name="jtf_base8">
           <Properties>
@@ -142,6 +148,9 @@
               <Font name="Comic Sans MS" size="18" style="2"/>
             </Property>
           </Properties>
+          <AuxValues>
+            <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
+          </AuxValues>
         </Component>
         <Component class="javax.swing.JLabel" name="lbl_base8">
           <Properties>
@@ -160,6 +169,9 @@
               <Font name="Comic Sans MS" size="18" style="2"/>
             </Property>
           </Properties>
+          <AuxValues>
+            <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
+          </AuxValues>
         </Component>
         <Component class="javax.swing.JLabel" name="lbl_base16">
           <Properties>

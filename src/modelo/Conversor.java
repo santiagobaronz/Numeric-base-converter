@@ -4,44 +4,35 @@ package modelo;
  *
  * @author aldanielago
  */
-public class Conversor {    
-    public String Conversor_base2(int decimal, int base){
-        if(base == 2 || base == 4 || base == 8){
-            String resultado = "";
-            while (decimal > 0) {
-                int aux = decimal % base;
-                resultado = aux + resultado;
-                decimal = decimal / base;
-            }
-            return resultado;
+public class Conversor { 
+    //Este convertirá los numeros entre 0 y 1
+    public String conversor_base_pequeña(int base){
+        String resultado = ""; 
+        
+        return resultado;
+    }
+    
+    //Este convertirá los numeros mayores a 1 hasta el 9
+    public String conversor_base_mediana(int numero, int base){
+        String resultado = "";
+        while (numero > 0) {
+            int aux = numero % base;
+            resultado = aux + resultado;
+            numero = numero / base;
         }
-        else {
-            String resultado = "";
-            while (decimal > 0) {
-                int aux = decimal % base;
-                if(aux >= 10){
-                   
-                }
-                resultado = aux + resultado;
-                decimal = decimal / base;
-            }
-            return resultado;
+        return resultado;
+    }
+    
+    //Este convertirá los numeros después del 9
+    public String conversor_base_grande(int decimal, int base){
+        StringBuilder hexBuilder = new StringBuilder();
+        while(decimal > 0){
+            int aux = decimal % base; 
+            decimal = decimal / base; 
+            String letra = Integer.toHexString(aux); 
+            hexBuilder.insert(0, letra);
         }
-    }
-    
-    public int Conversor_base3(){
-        
-        return 0;
-    }
-    
-    public int Conversor_base5(){
-        
-        
-        return 0;
-    }
-    
-    public int Conversor_baseN(){
-        
-        return 0;
+        String hex = hexBuilder.toString();
+        return hex;
     }
 }
