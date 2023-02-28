@@ -1,5 +1,7 @@
 package vista;
 
+import javax.swing.JOptionPane;
+
 /**
  *
  * @author aldanielago
@@ -8,6 +10,7 @@ public class Principal extends javax.swing.JFrame {
 
     public Principal() {
         initComponents();
+        this.panel_contenedor_bases.setVisible(false); 
     }
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
@@ -18,10 +21,12 @@ public class Principal extends javax.swing.JFrame {
         txt_description = new javax.swing.JLabel();
         jtf_number = new javax.swing.JTextField();
         btn_convetir = new javax.swing.JButton();
+        panel_contenedor_bases = new javax.swing.JPanel();
         lbl_base2 = new javax.swing.JLabel();
         lbl_base3 = new javax.swing.JLabel();
         lbl_base5 = new javax.swing.JLabel();
-        lbl_basen = new javax.swing.JLabel();
+        lbl_base4 = new javax.swing.JLabel();
+        btn_reiniciar = new javax.swing.JButton();
         jl_image = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -41,11 +46,24 @@ public class Principal extends javax.swing.JFrame {
         txt_description.setText("Digite un numero en base 10: ");
 
         jtf_number.setBackground(new java.awt.Color(181, 131, 141));
+        jtf_number.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                jtf_numberKeyTyped(evt);
+            }
+        });
 
         btn_convetir.setBackground(new java.awt.Color(255, 205, 178));
         btn_convetir.setFont(new java.awt.Font("Comic Sans MS", 2, 14)); // NOI18N
         btn_convetir.setForeground(new java.awt.Color(22, 26, 29));
         btn_convetir.setText("Convertir");
+        btn_convetir.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        btn_convetir.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                btn_convetirMouseClicked(evt);
+            }
+        });
+
+        panel_contenedor_bases.setBackground(new java.awt.Color(109, 104, 117));
 
         lbl_base2.setBackground(new java.awt.Color(229, 152, 155));
         lbl_base2.setFont(new java.awt.Font("Comic Sans MS", 2, 18)); // NOI18N
@@ -53,8 +71,13 @@ public class Principal extends javax.swing.JFrame {
         lbl_base2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         lbl_base2.setText("Base 2");
         lbl_base2.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(255, 180, 162), 1, true));
-        lbl_base2.setCursor(new java.awt.Cursor(java.awt.Cursor.CROSSHAIR_CURSOR));
+        lbl_base2.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         lbl_base2.setOpaque(true);
+        lbl_base2.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                lbl_base2MouseClicked(evt);
+            }
+        });
 
         lbl_base3.setBackground(new java.awt.Color(229, 152, 155));
         lbl_base3.setFont(new java.awt.Font("Comic Sans MS", 2, 18)); // NOI18N
@@ -62,8 +85,13 @@ public class Principal extends javax.swing.JFrame {
         lbl_base3.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         lbl_base3.setText("Base 3");
         lbl_base3.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(255, 180, 162), 1, true));
-        lbl_base3.setCursor(new java.awt.Cursor(java.awt.Cursor.CROSSHAIR_CURSOR));
+        lbl_base3.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         lbl_base3.setOpaque(true);
+        lbl_base3.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                lbl_base3MouseClicked(evt);
+            }
+        });
 
         lbl_base5.setBackground(new java.awt.Color(229, 152, 155));
         lbl_base5.setFont(new java.awt.Font("Comic Sans MS", 2, 18)); // NOI18N
@@ -71,17 +99,59 @@ public class Principal extends javax.swing.JFrame {
         lbl_base5.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         lbl_base5.setText("Base 5");
         lbl_base5.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(255, 180, 162), 1, true));
-        lbl_base5.setCursor(new java.awt.Cursor(java.awt.Cursor.CROSSHAIR_CURSOR));
+        lbl_base5.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         lbl_base5.setOpaque(true);
+        lbl_base5.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                lbl_base5MouseClicked(evt);
+            }
+        });
 
-        lbl_basen.setBackground(new java.awt.Color(229, 152, 155));
-        lbl_basen.setFont(new java.awt.Font("Comic Sans MS", 2, 18)); // NOI18N
-        lbl_basen.setForeground(new java.awt.Color(255, 255, 255));
-        lbl_basen.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        lbl_basen.setText("Otra base");
-        lbl_basen.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(255, 180, 162), 1, true));
-        lbl_basen.setCursor(new java.awt.Cursor(java.awt.Cursor.CROSSHAIR_CURSOR));
-        lbl_basen.setOpaque(true);
+        lbl_base4.setBackground(new java.awt.Color(229, 152, 155));
+        lbl_base4.setFont(new java.awt.Font("Comic Sans MS", 2, 18)); // NOI18N
+        lbl_base4.setForeground(new java.awt.Color(255, 255, 255));
+        lbl_base4.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        lbl_base4.setText("Base 4");
+        lbl_base4.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(255, 180, 162), 1, true));
+        lbl_base4.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        lbl_base4.setOpaque(true);
+        lbl_base4.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                lbl_base4MouseClicked(evt);
+            }
+        });
+
+        javax.swing.GroupLayout panel_contenedor_basesLayout = new javax.swing.GroupLayout(panel_contenedor_bases);
+        panel_contenedor_bases.setLayout(panel_contenedor_basesLayout);
+        panel_contenedor_basesLayout.setHorizontalGroup(
+            panel_contenedor_basesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(panel_contenedor_basesLayout.createSequentialGroup()
+                .addGap(18, 18, 18)
+                .addGroup(panel_contenedor_basesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(lbl_base5, javax.swing.GroupLayout.PREFERRED_SIZE, 400, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(lbl_base4, javax.swing.GroupLayout.PREFERRED_SIZE, 400, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(lbl_base3, javax.swing.GroupLayout.PREFERRED_SIZE, 400, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(lbl_base2, javax.swing.GroupLayout.PREFERRED_SIZE, 400, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(21, Short.MAX_VALUE))
+        );
+        panel_contenedor_basesLayout.setVerticalGroup(
+            panel_contenedor_basesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(panel_contenedor_basesLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(lbl_base2, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addComponent(lbl_base3, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addComponent(lbl_base4, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addComponent(lbl_base5, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+
+        btn_reiniciar.setBackground(new java.awt.Color(255, 205, 178));
+        btn_reiniciar.setFont(new java.awt.Font("Comic Sans MS", 2, 14)); // NOI18N
+        btn_reiniciar.setForeground(new java.awt.Color(22, 26, 29));
+        btn_reiniciar.setText("Reiniciar");
 
         jl_image.setIcon(new javax.swing.ImageIcon(getClass().getResource("/vista/fondo.jpeg"))); // NOI18N
 
@@ -91,56 +161,54 @@ public class Principal extends javax.swing.JFrame {
             jp_formLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jp_formLayout.createSequentialGroup()
                 .addGroup(jp_formLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jp_formLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                        .addComponent(jtf_number, javax.swing.GroupLayout.PREFERRED_SIZE, 320, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(panel_contenedor_bases, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGroup(jp_formLayout.createSequentialGroup()
+                        .addGap(41, 41, 41)
                         .addGroup(jp_formLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(jp_formLayout.createSequentialGroup()
-                                .addGap(60, 60, 60)
-                                .addComponent(txt_title))
+                                .addComponent(btn_convetir, javax.swing.GroupLayout.PREFERRED_SIZE, 137, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(74, 74, 74)
+                                .addComponent(btn_reiniciar, javax.swing.GroupLayout.PREFERRED_SIZE, 137, javax.swing.GroupLayout.PREFERRED_SIZE))
                             .addGroup(jp_formLayout.createSequentialGroup()
-                                .addGap(104, 104, 104)
-                                .addComponent(txt_description))))
-                    .addGroup(jp_formLayout.createSequentialGroup()
-                        .addGap(24, 24, 24)
-                        .addGroup(jp_formLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(lbl_base3, javax.swing.GroupLayout.PREFERRED_SIZE, 400, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(lbl_base2, javax.swing.GroupLayout.PREFERRED_SIZE, 400, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(lbl_base5, javax.swing.GroupLayout.PREFERRED_SIZE, 400, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(lbl_basen, javax.swing.GroupLayout.PREFERRED_SIZE, 400, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                    .addGroup(jp_formLayout.createSequentialGroup()
-                        .addGap(152, 152, 152)
-                        .addComponent(btn_convetir, javax.swing.GroupLayout.PREFERRED_SIZE, 137, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addGap(18, 18, 18)
-                .addComponent(jl_image))
+                                .addGap(11, 11, 11)
+                                .addGroup(jp_formLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                    .addComponent(txt_title)
+                                    .addComponent(jtf_number, javax.swing.GroupLayout.PREFERRED_SIZE, 320, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                            .addGroup(jp_formLayout.createSequentialGroup()
+                                .addGap(53, 53, 53)
+                                .addComponent(txt_description)))))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(jl_image, javax.swing.GroupLayout.PREFERRED_SIZE, 690, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, Short.MAX_VALUE))
         );
         jp_formLayout.setVerticalGroup(
             jp_formLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jp_formLayout.createSequentialGroup()
-                .addGap(25, 25, 25)
+                .addGap(24, 24, 24)
                 .addComponent(txt_title)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(txt_description)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGap(24, 24, 24)
                 .addComponent(jtf_number, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
-                .addComponent(btn_convetir)
-                .addGap(18, 18, 18)
-                .addComponent(lbl_base2, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
-                .addComponent(lbl_base3, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
-                .addComponent(lbl_base5, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
-                .addComponent(lbl_basen, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGroup(jp_formLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(btn_convetir)
+                    .addComponent(btn_reiniciar, javax.swing.GroupLayout.Alignment.TRAILING))
+                .addGap(35, 35, 35)
+                .addComponent(panel_contenedor_bases, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-            .addComponent(jl_image, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addGroup(jp_formLayout.createSequentialGroup()
+                .addComponent(jl_image, javax.swing.GroupLayout.PREFERRED_SIZE, 460, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jp_form, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+            .addGroup(layout.createSequentialGroup()
+                .addComponent(jp_form, javax.swing.GroupLayout.PREFERRED_SIZE, 1100, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -150,9 +218,69 @@ public class Principal extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    /**
-     * @param args the command line arguments
-     */
+    private void btn_convetirMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btn_convetirMouseClicked
+        this.panel_contenedor_bases.setVisible(true); 
+        /**
+        *if(jtf_number.isValid()){
+            JOptionPane.showMessageDialog(this, "Digite un numero", "Validación", JOptionPane.INFORMATION_MESSAGE);
+        }
+        else {
+            this.panel_contenedor_bases.setVisible(true); 
+        }*/
+    }//GEN-LAST:event_btn_convetirMouseClicked
+
+    private void jtf_numberKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jtf_numberKeyTyped
+        char x = evt.getKeyChar();
+        if (x == '0' || x == '1' || x == '2' || x == '3' || x == '4' || x == '5' || x == '6' || x == '7' || x == '8' || x == '9' || x == '.') {
+        } else {
+            evt.consume();
+        }
+    }//GEN-LAST:event_jtf_numberKeyTyped
+
+    private void lbl_base2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lbl_base2MouseClicked
+        Base2 p1 = new Base2();
+        p1.setSize(690,460);
+        p1.setLocation(0,0);
+        
+        jl_image.removeAll();
+        jl_image.add(p1);
+        jl_image.revalidate();
+        jl_image.repaint();
+    }//GEN-LAST:event_lbl_base2MouseClicked
+
+    private void lbl_base3MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lbl_base3MouseClicked
+        Base3 p1 = new Base3();
+        p1.setSize(690,460);
+        p1.setLocation(0,0);
+        
+        jl_image.removeAll();
+        jl_image.add(p1);
+        jl_image.revalidate();
+        jl_image.repaint();
+    }//GEN-LAST:event_lbl_base3MouseClicked
+
+    private void lbl_base5MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lbl_base5MouseClicked
+        Base5 p1 = new Base5();
+        p1.setSize(690,460);
+        p1.setLocation(0,0);
+        
+        jl_image.removeAll();
+        jl_image.add(p1);
+        jl_image.revalidate();
+        jl_image.repaint();
+    }//GEN-LAST:event_lbl_base5MouseClicked
+
+    private void lbl_base4MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lbl_base4MouseClicked
+        Base4 p1 = new Base4();
+        p1.setSize(690,460);
+        p1.setLocation(0,0);
+        
+        jl_image.removeAll();
+        jl_image.add(p1);
+        jl_image.revalidate();
+        jl_image.repaint();
+    }//GEN-LAST:event_lbl_base4MouseClicked
+
     public static void main(String args[]) {
         /* Set the Nimbus look and feel */
         //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
@@ -187,13 +315,15 @@ public class Principal extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btn_convetir;
+    private javax.swing.JButton btn_reiniciar;
     private javax.swing.JLabel jl_image;
     private javax.swing.JPanel jp_form;
     private javax.swing.JTextField jtf_number;
     private javax.swing.JLabel lbl_base2;
     private javax.swing.JLabel lbl_base3;
+    private javax.swing.JLabel lbl_base4;
     private javax.swing.JLabel lbl_base5;
-    private javax.swing.JLabel lbl_basen;
+    private javax.swing.JPanel panel_contenedor_bases;
     private javax.swing.JLabel txt_description;
     private javax.swing.JLabel txt_title;
     // End of variables declaration//GEN-END:variables

@@ -45,21 +45,21 @@
               <Group type="102" alignment="0" attributes="0">
                   <EmptySpace min="-2" pref="45" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="0" attributes="0">
-                      <Component id="lbl_base2" alignment="0" min="-2" max="-2" attributes="0"/>
                       <Component id="lbl_base4" alignment="0" min="-2" max="-2" attributes="0"/>
-                      <Component id="lbl_base8" alignment="0" min="-2" max="-2" attributes="0"/>
                       <Component id="lbl_base16" alignment="0" min="-2" max="-2" attributes="0"/>
+                      <Component id="lbl_base64" alignment="0" min="-2" max="-2" attributes="0"/>
+                      <Component id="lbl_base256" alignment="0" min="-2" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace type="separate" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="0" attributes="0">
-                      <Component id="jtf_base16" alignment="0" min="-2" pref="200" max="-2" attributes="0"/>
-                      <Component id="jtf_base8" alignment="0" min="-2" pref="200" max="-2" attributes="0"/>
-                      <Component id="jtf_base2" alignment="0" min="-2" pref="200" max="-2" attributes="0"/>
+                      <Component id="jtf_base256" alignment="0" min="-2" pref="200" max="-2" attributes="0"/>
+                      <Component id="jtf_base64" alignment="0" min="-2" pref="200" max="-2" attributes="0"/>
                       <Component id="jtf_base4" alignment="0" min="-2" pref="200" max="-2" attributes="0"/>
+                      <Component id="jtf_base16" alignment="0" min="-2" pref="200" max="-2" attributes="0"/>
                   </Group>
-                  <EmptySpace min="-2" pref="50" max="-2" attributes="0"/>
+                  <EmptySpace min="-2" pref="53" max="-2" attributes="0"/>
                   <Component id="panel_equivalencias" min="-2" max="-2" attributes="0"/>
-                  <EmptySpace pref="86" max="32767" attributes="0"/>
+                  <EmptySpace pref="71" max="32767" attributes="0"/>
               </Group>
           </Group>
         </DimensionLayout>
@@ -71,50 +71,32 @@
                       <Component id="panel_equivalencias" alignment="1" min="-2" max="-2" attributes="0"/>
                       <Group type="102" attributes="0">
                           <Group type="103" groupAlignment="3" attributes="0">
-                              <Component id="lbl_base2" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="jtf_base2" alignment="3" min="-2" max="-2" attributes="0"/>
-                          </Group>
-                          <EmptySpace min="-2" pref="70" max="-2" attributes="0"/>
-                          <Group type="103" groupAlignment="3" attributes="0">
                               <Component id="lbl_base4" alignment="3" min="-2" max="-2" attributes="0"/>
                               <Component id="jtf_base4" alignment="3" min="-2" max="-2" attributes="0"/>
                           </Group>
                           <EmptySpace min="-2" pref="70" max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="3" attributes="0">
-                              <Component id="lbl_base8" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="jtf_base8" alignment="3" min="-2" max="-2" attributes="0"/>
-                          </Group>
-                          <EmptySpace min="-2" pref="72" max="-2" attributes="0"/>
-                          <Group type="103" groupAlignment="3" attributes="0">
                               <Component id="lbl_base16" alignment="3" min="-2" max="-2" attributes="0"/>
                               <Component id="jtf_base16" alignment="3" min="-2" max="-2" attributes="0"/>
                           </Group>
+                          <EmptySpace min="-2" pref="70" max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="3" attributes="0">
+                              <Component id="lbl_base64" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="jtf_base64" alignment="3" min="-2" max="-2" attributes="0"/>
+                          </Group>
+                          <EmptySpace min="-2" pref="72" max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="3" attributes="0">
+                              <Component id="lbl_base256" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="jtf_base256" alignment="3" min="-2" max="-2" attributes="0"/>
+                          </Group>
                       </Group>
                   </Group>
-                  <EmptySpace pref="44" max="32767" attributes="0"/>
+                  <EmptySpace pref="52" max="32767" attributes="0"/>
               </Group>
           </Group>
         </DimensionLayout>
       </Layout>
       <SubComponents>
-        <Component class="javax.swing.JLabel" name="lbl_base2">
-          <Properties>
-            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-              <Font name="Comic Sans MS" size="18" style="2"/>
-            </Property>
-            <Property name="text" type="java.lang.String" value="Base 2: "/>
-          </Properties>
-        </Component>
-        <Component class="javax.swing.JTextField" name="jtf_base2">
-          <Properties>
-            <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-              <Color blue="9b" green="98" red="e5" type="rgb"/>
-            </Property>
-            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-              <Font name="Comic Sans MS" size="18" style="2"/>
-            </Property>
-          </Properties>
-        </Component>
         <Component class="javax.swing.JLabel" name="lbl_base4">
           <Properties>
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
@@ -133,22 +115,12 @@
             </Property>
           </Properties>
         </Component>
-        <Component class="javax.swing.JTextField" name="jtf_base8">
-          <Properties>
-            <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-              <Color blue="9b" green="98" red="e5" type="rgb"/>
-            </Property>
-            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-              <Font name="Comic Sans MS" size="18" style="2"/>
-            </Property>
-          </Properties>
-        </Component>
-        <Component class="javax.swing.JLabel" name="lbl_base8">
+        <Component class="javax.swing.JLabel" name="lbl_base16">
           <Properties>
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
               <Font name="Comic Sans MS" size="18" style="2"/>
             </Property>
-            <Property name="text" type="java.lang.String" value="Base 8: "/>
+            <Property name="text" type="java.lang.String" value="Base 16: "/>
           </Properties>
         </Component>
         <Component class="javax.swing.JTextField" name="jtf_base16">
@@ -161,12 +133,40 @@
             </Property>
           </Properties>
         </Component>
-        <Component class="javax.swing.JLabel" name="lbl_base16">
+        <Component class="javax.swing.JTextField" name="jtf_base64">
+          <Properties>
+            <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+              <Color blue="9b" green="98" red="e5" type="rgb"/>
+            </Property>
+            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+              <Font name="Comic Sans MS" size="18" style="2"/>
+            </Property>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JLabel" name="lbl_base64">
           <Properties>
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
               <Font name="Comic Sans MS" size="18" style="2"/>
             </Property>
-            <Property name="text" type="java.lang.String" value="Base 16: "/>
+            <Property name="text" type="java.lang.String" value="Base 64: "/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JTextField" name="jtf_base256">
+          <Properties>
+            <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+              <Color blue="9b" green="98" red="e5" type="rgb"/>
+            </Property>
+            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+              <Font name="Comic Sans MS" size="18" style="2"/>
+            </Property>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JLabel" name="lbl_base256">
+          <Properties>
+            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+              <Font name="Comic Sans MS" size="18" style="2"/>
+            </Property>
+            <Property name="text" type="java.lang.String" value="Base 256: "/>
           </Properties>
         </Component>
         <Container class="javax.swing.JPanel" name="panel_equivalencias">
@@ -179,20 +179,15 @@
           <Layout>
             <DimensionLayout dim="0">
               <Group type="103" groupAlignment="0" attributes="0">
-                  <Group type="102" attributes="0">
-                      <Group type="103" groupAlignment="0" attributes="0">
-                          <Group type="102" attributes="0">
-                              <EmptySpace min="-2" pref="47" max="-2" attributes="0"/>
-                              <Component id="jLabel1" min="-2" max="-2" attributes="0"/>
-                              <EmptySpace max="-2" attributes="0"/>
-                              <Component id="lbl_equivalencias" min="-2" max="-2" attributes="0"/>
-                          </Group>
-                          <Group type="102" alignment="0" attributes="0">
-                              <EmptySpace min="-2" pref="23" max="-2" attributes="0"/>
-                              <Component id="jtf_equivalencias" min="-2" pref="176" max="-2" attributes="0"/>
-                          </Group>
+                  <Group type="102" alignment="0" attributes="0">
+                      <EmptySpace min="-2" pref="17" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="2" attributes="0">
+                          <Component id="lbl_equivalencias" alignment="2" min="-2" max="-2" attributes="0"/>
+                          <Component id="jtf_equivalencias" alignment="2" min="-2" pref="176" max="-2" attributes="0"/>
                       </Group>
-                      <EmptySpace pref="19" max="32767" attributes="0"/>
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Component id="jLabel1" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace pref="17" max="32767" attributes="0"/>
                   </Group>
               </Group>
             </DimensionLayout>
@@ -217,7 +212,7 @@
             <Component class="javax.swing.JLabel" name="lbl_equivalencias">
               <Properties>
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-                  <Font name="Comic Sans MS" size="24" style="2"/>
+                  <Font name="Comic Sans MS" size="18" style="2"/>
                 </Property>
                 <Property name="text" type="java.lang.String" value="Equivalencias"/>
               </Properties>
@@ -232,9 +227,6 @@
                   <Font name="Comic Sans MS" size="18" style="2"/>
                 </Property>
               </Properties>
-              <Events>
-                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jtf_equivalenciasActionPerformed"/>
-              </Events>
             </Component>
           </SubComponents>
         </Container>
