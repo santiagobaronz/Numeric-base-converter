@@ -269,6 +269,19 @@ public class Principal extends javax.swing.JFrame {
         p1.setSize(690,460);
         p1.setLocation(0,0);
         
+        Conversor conversor = new Conversor(); 
+        int numero = Integer.parseInt(jtf_number.getText()); 
+        
+        p1.jtf_base2.setText("Si sirve");
+        p1.jtf_base2.setText(conversor.conversor_base(numero, 2));
+        System.out.println(conversor.conversor_base(numero, 2));
+        p1.jtf_base4.setText(String.valueOf(conversor.conversor_base(numero, 4)));
+        System.out.println(conversor.conversor_base(numero, 4));
+        p1.jtf_base8.setText(String.valueOf(conversor.conversor_base(numero, 8)));
+        System.out.println(conversor.conversor_base(numero, 8));
+        p1.jtf_base16.setText(String.valueOf(conversor.conversor_base(numero, 16)));
+        System.out.println(conversor.conversor_base(numero, 16));
+        
         jl_image.removeAll();
         jl_image.add(p1);
         jl_image.revalidate();
