@@ -229,29 +229,31 @@ public class Principal extends javax.swing.JFrame {
         Base5 base5 = new Base5(); 
         
         int numero = Integer.parseInt(jtf_number.getText()); 
-        base2.jtf_base2.setText(String.valueOf(conversor.conversor_base_mediana(numero, 2)));
-        System.out.println(conversor.conversor_base_mediana(numero, 2));
-        base2.jtf_base4.setText(String.valueOf(conversor.conversor_base_mediana(numero, 4)));
-        System.out.println(conversor.conversor_base_mediana(numero, 4));
-        base2.jtf_base8.setText(String.valueOf(conversor.conversor_base_mediana(numero, 8)));
-        System.out.println(conversor.conversor_base_mediana(numero, 8));
-        base2.jtf_base16.setText(String.valueOf(conversor.conversor_base_grande(numero, 16)));
-        System.out.println(conversor.conversor_base_mediana(numero, 16));
         
-        base3.jtf_base3.setText(String.valueOf(conversor.conversor_base_mediana(numero, 3)));
-        base3.jtf_base9.setText(String.valueOf(conversor.conversor_base_mediana(numero, 9)));
-        base3.jtf_base27.setText(String.valueOf(conversor.conversor_base_grande(numero, 27)));
-        base3.jtf_base81.setText(String.valueOf(conversor.conversor_base_grande(numero, 81)));
+        base2.jtf_base2.setText("Si sirve");
+        base2.jtf_base2.setText(conversor.conversor_base(numero, 2));
+        System.out.println(conversor.conversor_base(numero, 2));
+        base2.jtf_base4.setText(String.valueOf(conversor.conversor_base(numero, 4)));
+        System.out.println(conversor.conversor_base(numero, 4));
+        base2.jtf_base8.setText(String.valueOf(conversor.conversor_base(numero, 8)));
+        System.out.println(conversor.conversor_base(numero, 8));
+        base2.jtf_base16.setText(String.valueOf(conversor.conversor_base(numero, 16)));
+        System.out.println(conversor.conversor_base(numero, 16));
         
-        base4.jtf_base4.setText(String.valueOf(conversor.conversor_base_mediana(numero, 4)));
-        base4.jtf_base16.setText(String.valueOf(conversor.conversor_base_grande(numero, 16)));
-        base4.jtf_base64.setText(String.valueOf(conversor.conversor_base_grande(numero, 64)));
-        base4.jtf_base256.setText(String.valueOf(conversor.conversor_base_grande(numero, 256)));
+        base3.jtf_base3.setText(String.valueOf(conversor.conversor_base(numero, 3)));
+        base3.jtf_base9.setText(String.valueOf(conversor.conversor_base(numero, 9)));
+        base3.jtf_base27.setText(String.valueOf(conversor.conversor_base(numero, 27)));
+        base3.jtf_base81.setText(String.valueOf(conversor.conversor_base(numero, 81)));
         
-        base5.jtf_base5.setText(String.valueOf(conversor.conversor_base_mediana(numero, 5)));
-        base5.jtf_base25.setText(String.valueOf(conversor.conversor_base_grande(numero, 25)));
-        base5.jtf_base125.setText(String.valueOf(conversor.conversor_base_grande(numero, 125)));
-        base5.jtf_base625.setText(String.valueOf(conversor.conversor_base_grande(numero, 625)));
+        base4.jtf_base4.setText(String.valueOf(conversor.conversor_base(numero, 4)));
+        base4.jtf_base16.setText(String.valueOf(conversor.conversor_base(numero, 16)));
+        base4.jtf_base64.setText(String.valueOf(conversor.conversor_base(numero, 64)));
+        //base4.jtf_base256.setText(String.valueOf(conversor.conversor_base(numero, 256)));
+        
+        base5.jtf_base5.setText(String.valueOf(conversor.conversor_base(numero, 5)));
+        base5.jtf_base25.setText(String.valueOf(conversor.conversor_base(numero, 25)));
+        base5.jtf_base125.setText(String.valueOf(conversor.conversor_base(numero, 125)));
+        //base5.jtf_base625.setText(String.valueOf(conversor.conversor_base(numero, 625)));
     }//GEN-LAST:event_btn_convetirMouseClicked
 
     private void jtf_numberKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jtf_numberKeyTyped
@@ -343,7 +345,7 @@ public class Principal extends javax.swing.JFrame {
     private javax.swing.JButton btn_reiniciar;
     private javax.swing.JLabel jl_image;
     private javax.swing.JPanel jp_form;
-    private javax.swing.JTextField jtf_number;
+    public javax.swing.JTextField jtf_number;
     private javax.swing.JLabel lbl_base2;
     private javax.swing.JLabel lbl_base3;
     private javax.swing.JLabel lbl_base4;

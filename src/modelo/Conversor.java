@@ -4,35 +4,23 @@ package modelo;
  *
  * @author aldanielago
  */
-public class Conversor { 
-    //Este convertirá los numeros entre 0 y 1
-    public String conversor_base_pequeña(int base){
-        String resultado = ""; 
-        
-        return resultado;
+public class Conversor {
+    public String conversor_base(int number, int base) {
+        StringBuilder resultBuilder = new StringBuilder();
+        while (number > 0) {
+            int digit = number % base;
+            char digitChar = getDigitChar(digit, base);
+            resultBuilder.insert(0, digitChar);
+            number /= base;
+        }
+        return resultBuilder.toString();
     }
     
-    //Este convertirá los numeros mayores a 1 hasta el 9
-    public String conversor_base_mediana(int numero, int base){
-        String resultado = "";
-        while (numero > 0) {
-            int aux = numero % base;
-            resultado = aux + resultado;
-            numero = numero / base;
+    public static char getDigitChar(int value, int base) {
+        char[] chars = "0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyzαβɣδεζηθικλμνξοπρςτυφχψω₮৲৳௹฿៛₠₡₢₣₤₥₦₧₨₩₪₫₭₯₰₱₲₳₴₵≋￥﷼¢¤€ƒ£¥Ұ$元ރ円złKčर₶₷₹㍐圆圎圓圜＄￠￡￦".toCharArray();
+        if (value < 0 || value >= base) {
+            throw new IllegalArgumentException("Valor inválido: " + value);
         }
-        return resultado;
-    }
-    
-    //Este convertirá los numeros después del 9
-    public String conversor_base_grande(int decimal, int base){
-        StringBuilder hexBuilder = new StringBuilder();
-        while(decimal > 0){
-            int aux = decimal % base; 
-            decimal = decimal / base; 
-            String letra = Integer.toHexString(aux); 
-            hexBuilder.insert(0, letra);
-        }
-        String hex = hexBuilder.toString();
-        return hex;
+        return chars[value];
     }
 }
